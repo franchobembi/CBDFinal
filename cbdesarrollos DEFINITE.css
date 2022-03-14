@@ -1,0 +1,874 @@
+/*BODY AND GENERAL*/
+
+html,body
+{
+
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    font-family: 'Cairo';
+    text-align: center;
+    background-color: rgb(240, 240, 240);
+ }
+
+ a,u {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+
+h2 {
+    color: rgb(56, 91, 128);
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+/*HEADER*/
+header {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url("IMAGENES/construccion-resiste-rosario.jpg");
+    display: flex;
+}
+
+#fixedNav {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  display: block;
+  top: 0;
+  right: 0px;
+  background-color: #ffffffc0;
+  z-index: 1;
+}
+
+#navBorder {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 4px;
+  background-color: #ffffff00;
+  z-index: 0;
+  bottom: 0px;
+}
+
+#sloganContainer {
+    width: 70%;
+    align-self: center;
+    margin: auto auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+}
+
+#contactoTag {
+    background-color: rgb(56, 91, 128);
+    border-radius: 20px;
+    width: 180px;
+    height: 40px;
+    color: white;
+    margin: auto auto;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 1s, color 1s;
+}
+
+#contactoTag:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(56, 91, 128);
+}
+
+/*NAV...................................................................*/
+
+#logo {
+  display: block; height: 58px; width: auto; position: fixed; top: 20px; left: 28px; z-index: 402;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(56, 91, 128);
+    z-index: 401;
+    position: fixed;
+    width: 55%;
+    height: 24.03px;
+    border-radius: 12.015px;
+    right: 35px ;
+    top: 44.06px;
+}
+
+.items {
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  color: gray;
+}
+
+.selectedItem {
+  animation-name: selectedSection;
+}
+
+.unselectedItem {
+  animation-name: unselectedSection;
+}
+
+
+@keyframes selectedSection {
+  100% {
+      transform: scale(1.1,1.1);
+      transform-origin: bottom;
+      color: rgb(56, 91, 128);
+  }
+}
+
+@keyframes unselectedSection {
+  0% {
+      transform: scale(1.1,1.1);
+      transform-origin: bottom;
+      color: rgb(56, 91, 128);
+  }
+
+  100% {
+      transform: scale(1,1);
+      transform-origin: bottom;
+      color:gray;
+  }
+}
+
+/*HAMBURGER MENU*/
+
+.hambContainer {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 5%;
+    z-index: 149;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(56, 91, 128);
+    margin: 6px 0;
+    transition: 0.4s;
+
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+  #mobileMenu {
+    display: none;
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    top: 0;
+    left: -50%;
+    background-color: rgb(56, 91, 128);
+    z-index: 1500;
+    text-align: center;
+    transition: left 1s;
+    color: white;
+    flex-direction: column;
+}
+
+.appearMenu {
+    left: 0 !important;
+}
+
+  /*PROYECTOS.......................................................................*/
+
+  #proyectos {
+      height: 1450px;
+      width: 80%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-content: flex-start;
+      flex-wrap: wrap;
+      margin: auto auto;
+      gap: 20px;
+      z-index: -2;
+  }
+
+  .tarjetasProyecto {
+    width: 380px;
+    height: 320px;
+    position: relative;
+    background: #FFFFFF;
+    box-shadow: 0px 4.81231px 48.1231px rgba(0, 0, 0, 0.20);
+    border-radius: 12.0308px;
+    opacity: 0;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+
+  .tarjetasProyecto:nth-child(1) {
+    animation-delay: 0s;
+  }
+
+  .tarjetasProyecto:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .tarjetasProyecto:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+
+  .tarjetasProyecto:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+
+  .tarjetasProyecto:nth-child(5) {
+    animation-delay: 0.8s;
+  }
+
+  .tarjetasProyecto:nth-child(6) {
+    animation-delay: 0.9s;
+  }
+
+  .tarjetasProyecto:nth-child(7) {
+    animation-delay: 1s;
+  }
+
+  .tarjetasProyecto:nth-child(8) {
+    animation-delay: 1.2s;
+  }
+  .tarjetasProyecto:nth-child(9) {
+    animation-delay: 1.4s;
+  }
+
+  .tarjetasProyecto:nth-child(10) {
+    animation-delay: 1.6s;
+  }
+
+  .tarjetasProyecto:nth-child(11) {
+    animation-delay: 1.8s;
+  }
+
+  .tarjetasProyecto:nth-child(12) {
+    animation-delay: 2s;
+  }
+
+  .tarjetasProyPic {
+      width: 100%;
+      height: 65%;
+      position: absolute;
+        left: 0px;
+        top: 0px;
+        background-size: cover;
+        border-radius: 12.0308px 12.0308px 0px 0px;
+  }
+
+  .tarjetasProyPicTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    width: 70%;
+    height: 50px;
+    left: 10px;
+    bottom: 5px;
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 19.2733px;
+    line-height: 0px;
+    color: #FFFFFF;
+  }
+
+  .subtitle {
+    font-weight: 500;
+    font-size: 14.455px;
+    line-height: 0px;
+    color: #FFFFFF;
+    margin-top: 0px;
+  }
+
+  .proyTarjList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 70%;
+    height: 80px;
+    position: absolute;
+    left: 10px;
+    bottom: 15px;
+    color: black;
+    font-size: 14px;
+    margin-bottom: 3px;
+    list-style: none;
+    padding: 0;
+  }
+
+  .proyVerMas {
+    position: absolute;
+    width: 109.62px;
+    height: 28.91px;
+    right: 15px;
+    bottom: 15px;
+    background-color: #385B80;
+    border-radius: 4.81832px;
+    border: none;
+    text-align: center;
+    color: white;
+    font-size: 10px;
+    transition: background-color 0.5s;
+    cursor: pointer;
+  }
+
+  .proyVerMas:hover {
+    background-color: #28961a;
+  }
+
+  @keyframes appearProjects {
+    0% {
+        transform: translate(0, 10%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+  /*EN EJECUCION.............................................................................*/
+
+  h5 {
+    font-size: 20px;
+    color: #5c85b1;
+    margin-top: -20px;
+    z-index: -2;
+  }
+
+  #ejecucion {
+    width: 90%;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    margin: auto auto;
+    gap: 30px;
+    z-index: -2;
+  }
+
+  .ejecucionTarj {
+    width: 350.21px;
+    height: 536.03px;
+    filter: drop-shadow(0px 4px 40px rgba(0, 0, 0, 0.14));
+    border-radius: 20px;
+    background-size: cover;
+    background-position: bottom 35%;
+    background-color: aqua;
+    transition: transform 1s;
+  }
+
+  .ejecucionTarj:hover {
+    transform: scale(1.1);
+  }
+
+  .ejecucionTarjOver {
+    width: 100%;
+    height: 100%;
+    background-color: #00000088;
+    border-radius: 20px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+
+  .ejecucionTarjOver:hover {
+    opacity: 1;
+  }
+
+  .ejecucionTarjHeader {
+    padding: 0;
+    color: white;
+    font-size: large;
+  }
+
+  .ejecucionTarjLista {
+    color: white;
+    font-size: medium;
+    text-align: left;
+    margin-top: 40px;
+    line-height: 50px;
+  }
+
+  .ejecucionVerMas {
+    position: absolute;
+    width: 200px;
+    height: 35px;
+    right: calc(50% - 100px);
+    bottom: 30px;
+    background: #28961a;
+    border-radius: 4.81832px;
+    border: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+   /*SERVICIOS.............................................................................*/
+   
+   #servicios {
+    height: 800px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    margin: auto auto;
+    gap: 30px;
+}
+  #serviciosPhoto {
+    width: 300px;
+    height: 500px;
+    background: url("IMAGENES/Proyectos/Alberdi/alberdi555\(2\).jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px;
+  }
+
+  #serviciosMessages {
+    width: 750px;
+    height: 500px;
+    border-radius: 25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .messageContainer {
+    width: 230px;
+    height: 180px;
+    background-color: white;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+  }
+
+  .messageTic {
+    display: flex;
+    background-color: rgb(29, 168, 29);
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+
+  .messageHeader {
+    font-size: 19px;
+    line-height: 20px;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #385B80;
+    font-weight: 600;
+  }
+
+  .messageText {
+    font-size: 16px;
+    line-height: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(160, 160, 160);
+    padding: 8px;
+  }
+
+     /*CARD POSITION..................................*/
+
+  .messageContainer:nth-child(1) {
+    top: 0px; left: 10px;
+    transition-delay: 0.2s;
+  }
+
+  .messageContainer:nth-child(2) {
+    top: 25px; left: 280px; height: 160px !important;
+    transition-delay: 0.4s;
+  }
+
+  .messageContainer:nth-child(3) {
+    top: 10px; left: 545px;
+    transition-delay: 0.6s;
+  }
+
+  .messageContainer:nth-child(4) {
+    top: 220px; left: 0px;
+    transition-delay: 0.8s;
+  }
+
+  .messageContainer:nth-child(5) {
+    top: 240px; left: 260px;
+    transition-delay: 1s;
+  }
+
+  .messageContainer:nth-child(6) {
+    top: 240px; left: 530px;
+    transition-delay: 1.2s;
+  }
+
+  .messageContainer:nth-child(7) {
+    top: 450px; left: 100px;
+    transition-delay: 1.4s;
+  }
+
+  .messageContainer:nth-child(8) {
+    top: 460px; left: 370px; height: 200px !important;
+    transition-delay: 1.6s;
+  }
+
+     /*QUIENES.............................................................................*/
+
+     #quienes {
+      height: 650px;
+      width: 80%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-content: flex-start;
+      flex-wrap: wrap;
+      margin: auto auto;
+      gap: 40px;
+  }
+
+  #quienesPhoto {
+    width: 300px;
+    height: 500px;
+    background: url("IMAGENES/s_6.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px;
+  }
+
+  #quienesParagraph {
+    width: 550px;
+    height: 550px;
+    border-radius: 25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    text-align: justify;
+  }
+
+  /*FOOTER.............................................................................*/
+
+  footer {
+    width: 100%;
+    height: 400px;
+    background-color: #385B80;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: auto auto;
+    gap: 160px;
+  }
+
+  #footerData {
+    width: 350px;
+    height: 300px;
+    text-align: justify;
+    color: white;
+  }
+
+  #footerList {
+    line-height: 45px;
+    list-style: none;
+
+  }
+
+  #footerLogo {
+    width: 75%;
+    height: auto;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 350px;
+}
+
+  input {
+    line-height: 30px;
+    border-radius: 5px;
+    border: none;
+  }
+
+  textarea{
+    border-radius: 5px;
+  }
+
+  .form-controlSubmit {
+    background-color: #28961a;
+    color: white;
+  }
+
+    /*POPUPS.............................................................................*/
+
+    .tarjetas {
+      position: fixed;
+      width: 50vw;
+      height: 80vh;
+      background-color: rgb(56, 91, 128);
+      left: 25%;
+      top: 12.5%;
+      transform: translate(-50%, -50%);
+      z-index: 1120;
+      transform: scale(0);
+      transform-origin: center;
+      overflow-y: scroll;
+      display: grid;
+      border-radius: 25PX;
+      
+  }
+  
+  .listaTarjetas {
+      font-size: 25px;
+      margin-top: -80px; 
+      padding-bottom: 60px;
+      list-style: none;
+      padding-left: 0;
+      color: rgba(200, 200, 200);
+  }
+  
+  
+  
+  @media (max-width: 766px) {
+      h6 {
+          font-size: 20pt;
+      }
+  
+      .lista {
+          font-size: 20px;
+          margin-top: -50px;
+      }
+  
+      .tarjetas {
+          width: 80vw;
+          left: 10%;
+      }
+  }
+  
+  .imagenTarjetas {
+      width: 95%;
+      height: 430px;
+      justify-self: center;
+      margin-top: 20px;
+      z-index:11;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      overflow: hidden;
+  }
+  
+  .foto0, .foto1, .foto2, .foto3, .foto4, .foto5, .foto6, .foto7, .foto8, .foto9, .foto10, .foto11 {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+  
+  }
+  
+  .textoTarjetas {
+      width: 95%;
+      height: 500px;
+      justify-self: center;
+      margin-top: 20px;
+  }
+  
+  #fondo-tarjetas {
+      background-color: rgba(38, 53, 68, 0.6);
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1119;
+      left: 0%;
+      top: 0%;
+      opacity: 0;
+      transform:scale(0);
+      transform-origin: center
+  }
+
+     /* width */
+ .tarjetas::-webkit-scrollbar {
+  width: 10px;
+  height: 90%;
+}
+
+/* Track */
+.tarjetas::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-right: 10px;
+}
+
+/* Handle */
+.tarjetas::-webkit-scrollbar-thumb {
+  height: 10px;
+  background: white;
+}
+
+/* Handle on hover */
+.tarjetas::-webkit-scrollbar-thumb:hover {
+  background: white;
+}
+
+  @keyframes appearCard {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+    
+}
+
+@keyframes appearBackground {
+    0% {
+        opacity: 0;
+        
+    }
+    
+    10% {
+        transform: scale(1);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+}
+
+@keyframes appearPhoto {
+    0% {
+        opacity: 0;
+        
+    }
+
+    100% {
+        opacity: 1;
+    }
+    
+}
+
+h6{
+    color: rgb(56, 91, 128);
+    font-size: 35pt;
+    margin-top: -20px;
+}
+
+h5{
+    text-align: center;
+    margin-top: -10px;
+}
+
+@media (max-width: 1040px) {
+    h6 {
+        font-size: 25pt;
+    }
+}
+
+b {
+    color: white;
+}
+
+.next {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 45%;
+    right: 2%;
+    border-top: 10px solid white;
+    border-right: 10px solid white;
+    transform:rotate(45deg);
+    cursor: pointer;
+}
+
+.prev {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 45%;
+    left: 2%;
+    border-bottom: 10px solid white;
+    border-left: 10px solid white;
+    transform:rotate(45deg);
+    cursor: pointer;
+}
+
+.prev:hover {
+    animation-name: arrowLeftSelected;
+    animation-duration: 0.5s; 
+    animation-fill-mode: forwards;
+}
+
+@keyframes arrowLeftSelected {
+    100% {
+        border-bottom: 10px solid lightgray;
+        border-left: 10px solid lightgray;
+    }
+}
+
+.next:hover {
+    animation-name: arrowRightSelected;
+    animation-duration: 0.5s; 
+    animation-fill-mode: forwards;
+}
+
+@keyframes arrowRightSelected {
+    100% {
+        border-top: 10px solid lightgray;
+        border-right: 10px solid lightgray;
+    }
+}
